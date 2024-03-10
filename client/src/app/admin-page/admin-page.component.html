@@ -1,0 +1,79 @@
+<div class="flex flex-col bg-cyan-100 justify-center items-center">
+
+    <div class="flex justify-start items-center m-3">
+        <div class="data my-6 ">
+            <span class="text-4xl font-extrabold text-cyan-500 font-serif">Welcome, </span>
+        </div>
+    </div>
+    <div class="pt-10 bg-cyan-100 border-y-2 border-cyan-900">
+        <div class="mx-auto max-w-5xl px-2 lg:px-4">
+            <div class="mx-auto max-w-2xl sm:text-center opacity-100">
+                <h2 class="text-3xl font-bold tracking-tight text-cyan-900 sm:text-4xl">Current Events</h2>
+            </div>
+
+            <div class="flex justify-center item-center">
+                <div class="grid lg:grid-cols-3 md:grid-cols-2 mt-16 w-fit rounded-3xl sm:mt-20 lg:mx-0">
+
+                    <div *ngFor="let c of events" class="p-2  lg:mt-0">
+                        <div class="p-2 lg:mt-0 opacity-70 flex flex-wrap hover:opacity-100 hover:scale-110 ">
+
+                            <div class=" py-10 text-center  lg:flex lg:flex-col lg:justify-center lg:py-16">
+                                <div class="z-10 -mb-10 -mt-10 flex items-baseline w-80 justify-center gap-x-2">
+                                    <img class="rounded-full img" src="assets\cat_1.jpg" alt="">
+                                </div>
+                                <div class="mx-auto rounded-2xl bg-cyan-800  max-w-xs p-16">
+                                    <p class="text-base font-semibold text-cyan-300">{{c.eventName}}</p>
+
+                                    <p class="mt-6 text-xs leading-5 text-cyan-200">{{c.eventDescription}}</p>
+                                    <a href="#"
+                                        class="mt-10 text-cyan-900 block w-full rounded-md bg-cyan-200 px-3 py-2 text-center text-sm font-semibold shadow-sm hover:bg-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600">More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-2  lg:mt-0">
+                        <div class="p-2 lg:mt-0 opacity-70 flex flex-wrap hover:opacity-100 hover:scale-110 ">
+
+                            <div class=" py-10 text-center  lg:flex lg:flex-col lg:justify-center lg:py-16">
+                                <div class="z-10 -mb-10 -mt-10 flex items-baseline w-80 justify-center gap-x-2">
+                                    <img class="rounded-full img" src="assets\cat_1.jpg" alt="">
+                                </div>
+                                <div class="mx-auto rounded-2xl bg-cyan-800  max-w-xs p-16">
+                                    <p class="text-base font-semibold text-cyan-300">Build Event</p>
+
+                                    <p class="mt-6 text-6xl leading-5 text-cyan-200 p-2"> + </p>
+                                    <a routerLink="/admin/createEvent"
+                                        class="mt-10 text-cyan-900 block w-44 rounded-md bg-cyan-200 px-3 py-2 text-center text-sm font-semibold shadow-sm hover:bg-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600">Make</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" py-24 sm:py-32 flex justify-center items-center">
+        <div class="mx-auto  max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 flex flex-col">
+            <div class="max-w-2xl flex flex-col justify-center items-center">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Meet our Admin</h2>
+            </div>
+            <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2"
+                *ngFor="let a of admins">
+                <li>
+                    <div class="flex items-center gap-x-6">
+                        <img class="h-16 w-16 rounded-full"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKJQp8ndvEkIa-u1rMgJxVc7BBsR11uSLHGA&usqp=CAU"
+                            alt="">
+                        <div>
+                            <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">{{a.name}}
+                            </h3>
+                            <p class="text-sm font-semibold leading-6 text-indigo-600">Co-Founder / CEO</p>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
